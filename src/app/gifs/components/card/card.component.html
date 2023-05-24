@@ -1,0 +1,8 @@
+<div  class="card mb-2 bg-dark text-center">
+    <div class="card-body text-white">
+        <shared-lazy-image [url]="card.images.downsized_medium.url" [alt]="card.title"></shared-lazy-image>
+        <div class="card-text">
+            {{card.title || 'No tiene titulo'}}
+        </div>
+    </div>
+</div>

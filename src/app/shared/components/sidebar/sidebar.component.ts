@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { GifsService } from 'src/app/gifs/services/gifs.service';
 
 @Component({
@@ -8,12 +8,14 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
 })
 export class SidebarComponent {
 
-
-
   constructor(private gitService : GifsService){
   }
 
-  get TagsSearch(){
+  get TagsSearch(): string []{
     return this.gitService.tagsHistory;
+  }
+
+  searchTag(tag :string): void{
+    this.gitService.searchTag(tag);
   }
 }

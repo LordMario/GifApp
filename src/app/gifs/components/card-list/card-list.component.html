@@ -1,11 +1,5 @@
 <div class="row">
-    <div class="col-md-3 col-sm-6">
-        <div class="card mb-2 bg-dark text-center">
-            <div class="card-body text-white">
-                <div class="card-text">
-                    Hola mundo
-                </div>
-            </div>
-        </div>
+    <div *ngFor="let item of gitList" class="col-md-3 col-sm-6">
+        <gifs-card [card]="item"></gifs-card>
     </div>
 </div>
